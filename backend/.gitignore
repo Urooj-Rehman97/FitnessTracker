@@ -1,6 +1,8 @@
 # Dependencies
 node_modules/
-
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Environment variables
 .env
@@ -20,7 +22,7 @@ Thumbs.db
 *.swo
 *~
 
-logs/
+
 .log
 
 # Build files
@@ -39,5 +41,3 @@ tmp/
 
 # Upload directories
 uploads/
-/backend/src/logs/*
-!/backend/src/logs/.gitkeep
