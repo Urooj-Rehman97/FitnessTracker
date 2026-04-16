@@ -1,0 +1,146 @@
+/* ================= FONT IMPORTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ================= THEME VARIABLES ================= */
+@theme {
+  /* Brand Colors — PREMIUM RED */
+  --color-brand-primary: #e10600;      /* Ferrari red */
+  --color-brand-secondary: #b80000;    /* deep red */
+  --color-brand-tertiary: #7f1d1d;     /* wine red */
+  --color-brand-accent: #9ca3af;
+  --color-brand-light: #ffffff;
+  --color-brand-dark: #0b0d10;
+
+  /* Surfaces */
+  --color-surface-page: #000000;
+  --color-surface-card: #010b13;
+  --color-surface-card-alt: #1f2933;
+  --color-surface-input: #1f2933;
+  --color-surface-hover: #2b3440;
+  --color-border-input: #2b3440;
+  --color-border-card: #1f2933;
+  --color-avatar-border: #e10600;
+
+  --color-one-uni: #000000;
+  --color-uni-inv: #ffffff;
+
+  /* Text */
+  --color-text-base: #ffffff;
+  --color-text-muted: #9ca3af;
+  --color-text-label: #d1d5db;
+  --color-text-highlight: #e10600;
+  --color-text-accent: #9ca3af;
+  --color-text-error: #ef4444;
+  --color-text-inverted: #000000;
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #f97316;
+  --color-error: #ef4444;
+  --color-info: #e10600;
+
+  /* Buttons */
+  --color-button-primary: #e10600;
+  --color-button-disabled: #374151;
+  --color-button-edit: #9ca3af;
+  --color-button-edit-hover: #6b7280;
+  --color-button-edit-disabled: #9ca3af;
+}
+
+/* ================= LIGHT THEME ================= */
+[data-theme="light"] {
+  --color-surface-page: #f3f4f6;
+  --color-surface-card: #ffffff;
+  --color-surface-card-alt: #e5e7eb;
+  --color-surface-input: #ffffff;
+  --color-surface-hover: #e5e7eb;
+  --color-border-input: #d1d5db;
+  --color-border-card: #a5a5a5;
+  --color-avatar-border: #e10600;
+
+  --color-one-uni: #ffffff;
+  --color-uni-inv: #000000;
+
+  --color-text-base: #111827;
+  --color-text-muted: #4b5563;
+  --color-text-label: #374151;
+  --color-text-highlight: #e10600;
+  --color-text-accent: #6b7280;
+
+  --color-button-primary: #e10600;
+  --color-button-disabled: #9ca3af;
+  --color-button-edit: #374151;
+  --color-button-edit-hover: #1f2937;
+  --color-button-edit-disabled: #9ca3af;
+}
+
+/* ================= BASE ================= */
+@layer base {
+  body {
+    background-color: var(--color-surface-page);
+    color: var(--color-text-base);
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ================= UTILITIES ================= */
+@layer utilities {
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+}
+
+/* ================= SCROLLBAR ================= */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-button-primary);
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b80000;
+}
+
+/* ================= ANIMATIONS ================= */
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.animate-bounce-delay-0 { animation-delay: 0ms; }
+.animate-bounce-delay-150 { animation-delay: 150ms; }
+.animate-bounce-delay-300 { animation-delay: 300ms; }
+
+.backdrop-blur-strong {
+  backdrop-filter: blur(12px);
+}
+
+/* ================= GLOWS ================= */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(225, 6, 0, 0.45);
+}
+
+.glow-neon {
+  color: white;
+}
+
+/* ================= APP NAME ================= */
+.app-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+}
