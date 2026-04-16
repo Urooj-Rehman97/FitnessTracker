@@ -1,6 +1,6 @@
 // src/pages/public/Home.jsx
 import React, { useState, useEffect, useRef } from "react";
-import dashImg from "../../assets/User-Dashboad-Light.png";
+import dashImg from "../../assets/User-Dashboad-Light.PNG";
 import {
   Activity,
   Dumbbell,
