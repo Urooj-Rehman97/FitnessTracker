@@ -41,3 +41,5 @@ tmp/
 
 # Upload directories
 uploads/
+/backend/src/logs/*
+!/backend/src/logs/.gitkeep
